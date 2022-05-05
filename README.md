@@ -1,2 +1,2 @@
 # mvn-repository-example
-An example project to test uploading to mvn repository.
+An example project to test how to publish a library
