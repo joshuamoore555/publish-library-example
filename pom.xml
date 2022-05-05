@@ -5,12 +5,37 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.joshuamoore555</groupId>
-    <artifactId>mvn-repository-example</artifactId>
+    <artifactId>publish-library-example</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub joshuamoore555 Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/joshuamoore555/publish-library-example</url>
+        </repository>
+    </distributionManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <packaging>jar</packaging>
+    <name>publish-library-example</name>
+    <url>https://github.com/joshuamoore555/publish-library-example</url>
+    <description>A sample library to learn how to publish</description>
+
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
